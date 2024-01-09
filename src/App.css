@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar a {
+  @apply cursor-pointer hover:bg-slate-500 rounded-3xl px-5 py-2 transition-all;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar li{
+  @apply px-5 py-2;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar a {
+  @apply cursor-pointer hover:bg-slate-400 rounded-3xl px-5 py-2 transition-all;
 }
-
-.App-link {
-  color: #61dafb;
+.form .field input {
+  @apply py-2 px-3 rounded-2xl outline-none bg-slate-200;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form label{
+  @apply px-3 text-slate-700 whitespace-nowrap;
+}
+.form .field {
+  @apply lg:static flex flex-col  sm:flex-row justify-between items-center;
+}
+@media (max-width: 1023px) and (min-width: 640px){
+  .extended-sidebar{
+  background: linear-gradient(to right, rgb(100 116 139) 15%, white 0%, white 0%, white 100%);
+}
 }
